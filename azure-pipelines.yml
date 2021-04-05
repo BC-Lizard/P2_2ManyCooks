@@ -18,13 +18,13 @@ steps:
 
 
 # SonarCloud Prepare Analysis Configuration - Must be before build step
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'SonarCloudServiceConnection'
-    organization: '2manycooks'
-    scannerMode: 'MSBuild'
-    projectKey: '2ManyCooks_P2_2ManyCooks.git'
-    projectName: 'P2_2ManyCooks.git'
+#- task: SonarCloudPrepare@1
+#  inputs:
+#    SonarCloud: 'SonarCloudServiceConnection'
+#    organization: '2manycooks'
+#    scannerMode: 'MSBuild'
+#    projectKey: '2ManyCooks_P2_2ManyCooks.git'
+#    projectName: 'P2_2ManyCooks.git'
 
 
 - script: dotnet --info #dotnet build --configuration $(buildConfiguration)
@@ -32,10 +32,10 @@ steps:
 
 
 # SonarCloud Run Code Analysis
-- task: SonarCloudAnalyze@1
+#- task: SonarCloudAnalyze@1
   
 # SonarCloud Publish Quality Gate Result
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
+#- task: SonarCloudPublish@1
+#  inputs:
+#    pollingTimeoutSec: '300'
 
